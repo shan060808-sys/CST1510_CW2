@@ -1,6 +1,6 @@
 ## Step 6: Build `fetch_data.py`
 
-Now put Steps 2 to 5 into one file, as four small functions:
+'''Now put Steps 2 to 5 into one file, as four small functions:
 
 | Function | Job |
 |---|---|
@@ -13,7 +13,7 @@ The `try / except` in `get_data` means: if the internet is down, print a message
 
 **Build.** Create `fetch_data.py` in your `CST1510_CW2` folder, paste this in, then change the settings at the top to your own (Steps 1 to 5):
 
-```python
+python'''
 """
 fetch_data.py - Week 8: get data from an API and save it as DATA/raw.csv.
 
@@ -80,4 +80,3 @@ if __name__ == "__main__":
         table = tidy_data(table)
         print(table.head())
         save_data(table, RAW_FILE)
-```
