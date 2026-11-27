@@ -31,9 +31,9 @@ URL = "https://disease.sh/v3/covid-19/countries"
 PARAMS = {}
 RECORDS_KEY = None                # the key that holds the list of records (None if the reply is already a list)
 
-RENAME = {}                       # ugly column name -> short column name
-KEEP = []                         # the columns you want, e.g. ["country", "continent", "cases"]
-MUST_HAVE = []                    # drop any row that is empty in these columns
+RENAME = {"country": "Country", "continent": "Continent", "cases": "Cases"}                       # ugly column name -> short column name
+KEEP = ["Country", "Continent", "Cases"]                         # the columns you want, e.g. ["country", "continent", "cases"]
+MUST_HAVE = ["Country"]                    # drop any row that is empty in these columns
 
 RAW_FILE = Path(__file__).parent / "DATA" / "raw.csv"
 
